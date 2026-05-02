@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Task | Campus Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <div class="noise-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="site-shell page-transition">
+    <header class="topbar">
+      <div class="container">
+        <div class="navbar">
+          <a class="brand" href="index.html" data-transition>
+            <span class="brand-icon"></span>
+            <span>Campus Connect</span>
+          </a>
+          <nav class="nav-links">
+            <a class="nav-link" href="browse.html" data-transition>Browse</a>
+            <a class="nav-link is-active" href="post-task.html" data-transition>Post Task</a>
+            <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+            <a class="nav-link" href="profile.html" data-transition>Profile</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+              <span class="badge-dot">3</span>
+            </button>
+            <div class="avatar-chip">
+              <div class="avatar avatar-sm">RK</div>
+              <span>Rabia</span>
+            </div>
+            <button class="mobile-menu-btn" type="button" data-mobile-toggle aria-label="Toggle menu">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-drawer glass-card">
+      <div class="card-glare"></div>
+      <nav>
+        <a class="nav-link" href="browse.html" data-transition>Browse</a>
+        <a class="nav-link is-active" href="post-task.html" data-transition>Post Task</a>
+        <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+        <a class="nav-link" href="profile.html" data-transition>Profile</a>
+      </nav>
+    </aside>
+
+    <main class="container section">
+      <section class="step-shell reveal" data-post-task>
+        <span class="eyebrow">Create Listing</span>
+        <h1 class="section-title">Post a software engineering task with clarity.</h1>
+        <p class="section-lead">Describe your assignment, deadline, rubric, and deliverables so the right student can help quickly.</p>
+
+        <div class="step-indicator">
+          <div class="step-pill is-active">Details</div>
+          <div class="step-pill">Budget</div>
+          <div class="step-pill">Review</div>
+        </div>
+
+        <div class="step-panels glass-card">
+          <div class="card-glare"></div>
+
+          <section class="step-panel is-active">
+            <div class="form-grid">
+              <div class="field">
+                <label for="taskTitle">Task Title</label>
+                <input class="input" id="taskTitle" type="text">
+              </div>
+              <div class="field">
+                <label for="taskCategory">Category</label>
+                <select class="select" id="taskCategory">
+                  <option>Software Project Management</option>
+                  <option>UML Diagrams</option>
+                  <option>Database Design</option>
+                  <option>Frontend Prototype</option>
+                  <option>Testing and QA</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="taskDescription">Description</label>
+                <textarea class="textarea" id="taskDescription" maxlength="500" data-autoresize></textarea>
+                <div class="range-output">
+                  <span>Make it specific so good bidders can respond faster.</span>
+                  <strong data-char-count>0/500</strong>
+                </div>
+              </div>
+              <div class="field">
+                <label for="taskDeadline">Deadline</label>
+                <input class="input" id="taskDeadline" type="date">
+              </div>
+              <button class="btn btn-primary" type="button" data-next-step>
+                Next
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <section class="step-panel">
+            <div class="form-grid">
+              <div class="field">
+                <label for="budgetRange">Budget Range</label>
+                <input class="slider-input" id="budgetRange" type="range" min="500" max="5000" step="250" value="3000">
+                <div class="range-output">
+                  <span>Suggested range</span>
+                  <strong data-budget-output>PKR 500 - PKR 3,000</strong>
+                </div>
+              </div>
+              <div class="field">
+                <label>Skill Tags</label>
+                <div class="input tag-input-shell" data-skill-tags>
+                  <input id="skillInput" type="text">
+                </div>
+              </div>
+              <div class="field">
+                <label>Urgency</label>
+                <div class="toggle-row">
+                  <button class="toggle-pill is-active" type="button" data-urgency="Normal">Normal</button>
+                  <button class="toggle-pill" type="button" data-urgency="Urgent">Urgent</button>
+                </div>
+              </div>
+              <div class="row-2">
+                <button class="btn btn-ghost" type="button" data-prev-step>
+                  <i data-lucide="arrow-left"></i>
+                  Back
+                </button>
+                <button class="btn btn-primary" type="button" data-next-step>
+                  Next
+                  <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="step-panel">
+            <div class="form-grid">
+              <div class="glass-card panel">
+                <div class="card-glare"></div>
+                <div class="panel-header">
+                  <div>
+                    <h2>Review Summary</h2>
+                    <p>Everything below is generated from your simulated form inputs.</p>
+                  </div>
+                  <span class="tag tag-green">Ready</span>
+                </div>
+                <div class="summary-grid" data-review-summary></div>
+              </div>
+              <div class="row-2">
+                <button class="btn btn-ghost" type="button" data-prev-step>
+                  <i data-lucide="arrow-left"></i>
+                  Back
+                </button>
+                <button class="btn btn-primary" type="button" data-submit-task>
+                  <i data-lucide="send"></i>
+                  Post Task
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="footer-spacer"></div>
+  </div>
+
+  <button class="help-button" type="button" aria-label="Help">
+    <i data-lucide="help-circle"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

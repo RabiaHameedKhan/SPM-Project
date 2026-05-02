@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Detail | Campus Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <div class="noise-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="site-shell page-transition">
+    <header class="topbar">
+      <div class="container">
+        <div class="navbar">
+          <a class="brand" href="index.html" data-transition>
+            <span class="brand-icon"></span>
+            <span>Campus Connect</span>
+          </a>
+          <nav class="nav-links">
+            <a class="nav-link is-active" href="browse.html" data-transition>Browse</a>
+            <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+            <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+            <a class="nav-link" href="profile.html" data-transition>Profile</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+              <span class="badge-dot">3</span>
+            </button>
+            <div class="avatar-chip">
+              <div class="avatar avatar-sm">RK</div>
+              <span>Rabia</span>
+            </div>
+            <button class="mobile-menu-btn" type="button" data-mobile-toggle aria-label="Toggle menu">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-drawer glass-card">
+      <div class="card-glare"></div>
+      <nav>
+        <a class="nav-link is-active" href="browse.html" data-transition>Browse</a>
+        <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+        <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+        <a class="nav-link" href="profile.html" data-transition>Profile</a>
+      </nav>
+    </aside>
+
+    <main class="container section">
+      <section class="detail-layout">
+        <div class="detail-main">
+          <article class="glass-card panel reveal">
+            <div class="card-glare"></div>
+            <div class="task-meta" style="margin-bottom: 18px;">
+              <span class="tag tag-blue">SPM</span>
+              <span class="badge status-badge status-open">Open</span>
+            </div>
+            <h1 class="section-title">Software Project Management WBS and Gantt chart</h1>
+            <div class="detail-meta" style="margin: 18px 0 24px;">
+              <div class="avatar">SR</div>
+              <div>
+                <strong>Posted by Hamza Zafar</strong>
+                <p>Software Engineering | 4.9 star rating | Posted May 2</p>
+              </div>
+            </div>
+            <p>This task is for a Software Project Management assignment. The final deliverables should include a Work Breakdown Structure, milestone timeline, Gantt chart, risk register, communication plan, and short explanation for a semester software project.</p>
+            <p style="margin-top: 16px;">The work should look clean enough for submission and viva discussion. Bonus if the diagrams are organized in a way that can be pasted into a Word report or presentation without extra formatting.</p>
+            <div class="skills-wrap" style="margin-top: 22px;">
+              <span class="tag tag-blue">SPM</span>
+              <span class="tag tag-violet">Gantt Chart</span>
+              <span class="tag tag-green">Risk Register</span>
+              <span class="tag tag-blue">Documentation</span>
+            </div>
+            <div class="task-meta" style="margin-top: 24px;">
+              <span>Deadline May 6</span>
+              <span>Posted May 2</span>
+              <span>7 bids so far</span>
+            </div>
+          </article>
+
+          <article class="reveal">
+            <div class="panel-header">
+              <div>
+                <h2>Current Bids</h2>
+                <p>Students who can help with course-ready deliverables.</p>
+              </div>
+            </div>
+            <div class="list-stack">
+              <div class="glass-card bidder-card">
+                <div class="card-glare"></div>
+                <div class="bidder-head">
+                  <div class="detail-meta">
+                    <div class="avatar avatar-sm">RK</div>
+                    <div>
+                      <strong>Rabia Khan</strong>
+                      <p>4.8 star | Software Engineering</p>
+                    </div>
+                  </div>
+                  <strong class="tag tag-green">PKR 4,500</strong>
+                </div>
+                <p>I can prepare a clean WBS, Gantt chart, risk register, and report-ready formatting within 2 days.</p>
+                <button class="btn btn-ghost" type="button" data-toast-title="Demo action" data-toast-message="Accept Bid is disabled in this static mockup.">Accept Bid</button>
+              </div>
+
+              <div class="glass-card bidder-card">
+                <div class="card-glare"></div>
+                <div class="bidder-head">
+                  <div class="detail-meta">
+                    <div class="avatar avatar-sm">FN</div>
+                    <div>
+                      <strong>Fatima Noor</strong>
+                      <p>4.9 star | COMSATS</p>
+                    </div>
+                  </div>
+                  <strong class="tag tag-green">PKR 5,000</strong>
+                </div>
+                <p>I can structure the SPM content properly and include assumptions, dependencies, and milestone notes.</p>
+                <button class="btn btn-ghost" type="button" data-toast-title="Demo action" data-toast-message="Accept Bid is disabled in this static mockup.">Accept Bid</button>
+              </div>
+
+              <div class="glass-card bidder-card">
+                <div class="card-glare"></div>
+                <div class="bidder-head">
+                  <div class="detail-meta">
+                    <div class="avatar avatar-sm">AR</div>
+                    <div>
+                      <strong>Ali Raza</strong>
+                      <p>4.6 star | Bahria University</p>
+                    </div>
+                  </div>
+                  <strong class="tag tag-green">PKR 3,800</strong>
+                </div>
+                <p>I can build the schedule and risk matrix quickly, with clean visuals for faculty review.</p>
+                <button class="btn btn-ghost" type="button" data-toast-title="Demo action" data-toast-message="Accept Bid is disabled in this static mockup.">Accept Bid</button>
+              </div>
+
+              <div class="glass-card bidder-card">
+                <div class="card-glare"></div>
+                <div class="bidder-head">
+                  <div class="detail-meta">
+                    <div class="avatar avatar-sm">MM</div>
+                    <div>
+                      <strong>Maham Malik</strong>
+                      <p>4.8 star | FAST Lahore</p>
+                    </div>
+                  </div>
+                  <strong class="tag tag-green">PKR 4,200</strong>
+                </div>
+                <p>I'll organize the planning documents and make them easy to paste into your final project report.</p>
+                <button class="btn btn-ghost" type="button" data-toast-title="Demo action" data-toast-message="Accept Bid is disabled in this static mockup.">Accept Bid</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="detail-sidebar reveal">
+          <div class="glass-card sticky-card">
+            <div class="card-glare"></div>
+            <p>Budget Range</p>
+            <div class="budget-amount">PKR 2,500 - 4,000</div>
+            <div class="task-meta" style="margin-top: 12px;">
+              <span>7 bids so far</span>
+            </div>
+
+            <div class="expandable form-grid">
+              <div class="field">
+                <label for="bidAmount">Bid Amount</label>
+                <input class="input" id="bidAmount" type="number">
+              </div>
+              <div class="field">
+                <label for="bidPitch">Short Pitch</label>
+                <textarea class="textarea" id="bidPitch" data-autoresize></textarea>
+              </div>
+              <button class="btn btn-primary" type="button" data-toast-title="Bid submitted!" data-toast-message="Your bid has been added to this static demo experience.">
+                <i data-lucide="send"></i>
+                Submit Your Bid
+              </button>
+            </div>
+
+            <div class="expandable">
+              <p>Deadline Countdown</p>
+              <div class="countdown" data-countdown="2026-05-06T23:00:00">Loading...</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <div class="footer-spacer"></div>
+  </div>
+
+  <button class="help-button" type="button" aria-label="Help">
+    <i data-lucide="help-circle"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

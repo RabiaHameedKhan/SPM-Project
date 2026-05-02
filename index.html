@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect | Student Freelance Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <div class="noise-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="site-shell page-transition">
+    <header class="topbar">
+      <div class="container">
+        <div class="navbar">
+          <a class="brand" href="index.html" data-transition>
+            <span class="brand-icon"></span>
+            <span>Campus Connect</span>
+          </a>
+
+          <nav class="nav-links">
+            <a class="nav-link" href="browse.html" data-transition>Browse</a>
+            <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+            <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+            <a class="nav-link" href="profile.html" data-transition>Profile</a>
+          </nav>
+
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+              <span class="badge-dot">3</span>
+            </button>
+            <div class="avatar-chip">
+              <div class="avatar avatar-sm">RK</div>
+              <span>Rabia</span>
+            </div>
+            <button class="mobile-menu-btn" type="button" data-mobile-toggle aria-label="Toggle menu">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-drawer glass-card">
+      <div class="card-glare"></div>
+      <nav>
+        <a class="nav-link" href="browse.html" data-transition>Browse</a>
+        <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+        <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+        <a class="nav-link" href="profile.html" data-transition>Profile</a>
+      </nav>
+    </aside>
+
+    <main class="page-hero">
+      <section class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Student Work Marketplace</span>
+          <h1 class="hero-title">
+            <span class="word">Post</span>
+            <span class="word">small tasks.</span>
+            <span class="word">Hire</span>
+            <span class="word text-gradient">student talent.</span>
+          </h1>
+          <p class="hero-subtitle">Campus Connect connects students who can bid on assignments, presentations, research support, design work, coding help, tutoring, and other small campus tasks.</p>
+
+          <div class="hero-search-card" role="search">
+            <div class="search-tabs">
+              <button class="search-tab is-active" type="button">Find student talent</button>
+              <button class="search-tab" type="button">Find course tasks</button
+            </div>
+            <div class="hero-search-row">
+              <i data-lucide="search"></i>
+              <input type="search" aria-label="Search Campus Connect">
+              <a class="btn btn-primary" href="browse.html" data-transition>Search</a>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="browse.html" data-transition>
+              <i data-lucide="briefcase"></i>
+              Find Work
+            </a>
+            <a class="btn btn-ghost" href="post-task.html" data-transition>
+              <i data-lucide="plus-circle"></i>
+              Post a Task for Free
+            </a>
+          </div>
+
+          <div class="floating-stats">
+            <div class="glass-card stat-float">
+              <div class="card-glare"></div>
+              <strong>1,240+</strong>
+              <p>Course Tasks</p>
+            </div>
+            <div class="glass-card stat-float">
+              <div class="card-glare"></div>
+              <strong>890+</strong>
+              <p>SE Students</p>
+            </div>
+            <div class="glass-card stat-float">
+              <div class="card-glare"></div>
+              <strong>4.9 Stars</strong>
+              <p>Peer Rated</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-side reveal">
+          <div class="marketplace-visual">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Students collaborating on coursework">
+            <div class="proposal-card proposal-main">
+              <div class="avatar avatar-sm">RK</div>
+              <div>
+                <strong>Rabia Khan</strong>
+                <p>Software Engineering | 4.9 rating</p>
+              </div>
+              <span class="tag tag-green">Available</span>
+            </div>
+            <div class="proposal-card proposal-float">
+              <span class="mini-label">New proposal</span>
+              <strong>SPM Gantt chart</strong>
+              <p>PKR 3,500 · 2 days</p>
+            </div>
+          </div>
+
+          <div class="glass-card login-card upwork-panel">
+            <div class="card-glare"></div>
+            <div class="card-header">
+              <div>
+                <h2>Post today. Get bids fast.</h2>
+                <p>Describe your assignment and compare student proposals by budget, rating, and deadline.</p>
+              </div>
+              <span class="tag tag-blue">Student Only</span>
+            </div>
+
+            <div class="feature-list">
+              <div>
+                <i data-lucide="check-circle-2"></i>
+                <span>Free task posting</span>
+              </div>
+              <div>
+                <i data-lucide="check-circle-2"></i>
+                <span>Compare bids and student profiles</span>
+              </div>
+              <div>
+                <i data-lucide="check-circle-2"></i>
+                <span>Small tasks, course-friendly deadlines</span>
+              </div>
+            </div>
+
+            <div class="proposal-mini-list">
+              <div class="proposal-row">
+                <span class="avatar avatar-sm">AN</span>
+                <div>
+                  <strong>React UI assignment</strong>
+                  <p>4 bids · avg PKR 4,800</p>
+                </div>
+              </div>
+              <div class="proposal-row">
+                <span class="avatar avatar-sm">HZ</span>
+                <div>
+                  <strong>UML sequence diagram</strong>
+                  <p>3 bids · due tomorrow</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="btn btn-primary" href="post-task.html" data-transition>
+              <i data-lucide="send"></i>
+              Post Your Task
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container upwork-categories reveal">
+        <div class="section-kicker">
+          <span class="eyebrow">Browse student help by category</span>
+          <a href="browse.html" data-transition>See all tasks</a>
+        </div>
+        <div class="category-grid">
+          <a class="category-tile" href="browse.html" data-transition>
+            <strong>Assignments & Reports</strong>
+            <span>coursework, summaries, formatting</span>
+            <p>4.9/5 · 240+ tasks</p>
+          </a>
+          <a class="category-tile" href="browse.html" data-transition>
+            <strong>Design & Presentations</strong>
+            <span>slides, posters, UI mockups</span>
+            <p>4.8/5 · 210+ tasks</p>
+          </a>
+          <a class="category-tile" href="browse.html" data-transition>
+            <strong>Coding & Tech Help</strong>
+            <span>websites, debugging, databases</span>
+            <p>4.9/5 · 310+ tasks</p>
+          </a>
+          <a class="category-tile" href="browse.html" data-transition>
+            <strong>Tutoring & Research</strong>
+            <span>peer help, surveys, notes</span>
+            <p>4.7/5 · 170+ tasks</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="footer-spacer"></div>
+  </div>
+
+  <button class="help-button" type="button" aria-label="Help">
+    <i data-lucide="help-circle"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

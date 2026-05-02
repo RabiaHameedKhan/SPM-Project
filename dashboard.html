@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Campus Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <div class="noise-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="site-shell page-transition">
+    <header class="topbar">
+      <div class="container">
+        <div class="navbar">
+          <a class="brand" href="index.html" data-transition>
+            <span class="brand-icon"></span>
+            <span>Campus Connect</span>
+          </a>
+          <nav class="nav-links">
+            <a class="nav-link" href="browse.html" data-transition>Browse</a>
+            <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+            <a class="nav-link is-active" href="dashboard.html" data-transition>Dashboard</a>
+            <a class="nav-link" href="profile.html" data-transition>Profile</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+              <span class="badge-dot">3</span>
+            </button>
+            <div class="avatar-chip">
+              <div class="avatar avatar-sm">RK</div>
+              <span>Rabia</span>
+            </div>
+            <button class="mobile-menu-btn" type="button" data-mobile-toggle aria-label="Toggle menu">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-drawer glass-card">
+      <div class="card-glare"></div>
+      <nav>
+        <a class="nav-link" href="browse.html" data-transition>Browse</a>
+        <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+        <a class="nav-link is-active" href="dashboard.html" data-transition>Dashboard</a>
+        <a class="nav-link" href="profile.html" data-transition>Profile</a>
+      </nav>
+    </aside>
+
+    <main class="container section dashboard-grid">
+      <section class="reveal">
+        <span class="eyebrow">Overview</span>
+        <h1 class="section-title">Good evening, Rabia</h1>
+        <p class="section-lead">You have software engineering assignments, bids, and project milestones organized in one calm workspace.</p>
+      </section>
+
+      <section class="stats-grid">
+        <article class="glass-card stat-card reveal">
+          <div class="card-glare"></div>
+          <div class="stat-card-top">
+            <div class="stat-icon"><i data-lucide="clipboard-list"></i></div>
+            <span class="tag tag-blue">Live</span>
+          </div>
+          <div class="stat-value" data-count="5">0</div>
+          <p>Assignments Posted</p>
+        </article>
+        <article class="glass-card stat-card reveal">
+          <div class="card-glare"></div>
+          <div class="stat-card-top">
+            <div class="stat-icon"><i data-lucide="gavel"></i></div>
+            <span class="tag tag-violet">Bidding</span>
+          </div>
+          <div class="stat-value" data-count="2">0</div>
+          <p>Active Bids</p>
+        </article>
+        <article class="glass-card stat-card reveal">
+          <div class="card-glare"></div>
+          <div class="stat-card-top">
+            <div class="stat-icon"><i data-lucide="badge-check"></i></div>
+            <span class="tag tag-green">Done</span>
+          </div>
+          <div class="stat-value" data-count="8">0</div>
+          <p>Tasks Completed</p>
+        </article>
+        <article class="glass-card stat-card reveal">
+          <div class="card-glare"></div>
+          <div class="stat-card-top">
+            <div class="stat-icon"><i data-lucide="star"></i></div>
+            <span class="tag tag-warning">Trust</span>
+          </div>
+          <div class="stat-value" data-count="4.7" data-decimals="1">0</div>
+          <p>Rating</p>
+        </article>
+      </section>
+
+      <section class="dashboard-columns">
+        <article class="glass-card panel reveal">
+          <div class="card-glare"></div>
+          <div class="panel-header">
+            <div>
+              <h2>My Posted Tasks</h2>
+              <p>Track SE coursework help, bids, and approaching deadlines.</p>
+            </div>
+            <a class="btn btn-ghost" href="post-task.html" data-transition>New Task</a>
+          </div>
+          <div class="list-stack">
+            <div class="task-item">
+              <strong>SRS document for food delivery app</strong>
+              <div class="task-meta">
+                <span class="badge status-badge status-open">Open</span>
+                <span>12 bids</span>
+                <span>Due May 5</span>
+              </div>
+            </div>
+            <div class="task-item">
+              <strong>SPM Gantt chart and risk register</strong>
+              <div class="task-meta">
+                <span class="badge status-badge status-progress">In Progress</span>
+                <span>5 bids</span>
+                <span>Due May 6</span>
+              </div>
+            </div>
+            <div class="task-item">
+              <strong>UML diagrams for LMS semester project</strong>
+              <div class="task-meta">
+                <span class="badge status-badge status-complete">Completed</span>
+                <span>8 bids</span>
+                <span>Closed Apr 28</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card panel reveal">
+          <div class="card-glare"></div>
+          <div class="panel-header">
+            <div>
+              <h2>My Bids</h2>
+              <p>Your latest offers across frontend, database, and testing tasks.</p>
+            </div>
+            <span class="tag tag-violet">2 Active</span>
+          </div>
+          <div class="list-stack">
+            <div class="bid-item">
+              <strong>React UI for library management assignment</strong>
+              <div class="task-meta">
+                <span>PKR 2,800</span>
+                <span class="badge status-badge status-pending">Pending</span>
+              </div>
+            </div>
+            <div class="bid-item">
+              <strong>Python notebook for defect prediction mini project</strong>
+              <div class="task-meta">
+                <span>PKR 4,500</span>
+                <span class="badge status-badge status-accepted">Accepted</span>
+              </div>
+            </div>
+            <div class="bid-item">
+              <strong>ERD and SQL schema for hospital system</strong>
+              <div class="task-meta">
+                <span>PKR 3,000</span>
+                <span class="badge status-badge status-rejected">Rejected</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="reveal">
+        <div class="panel-header">
+          <div>
+            <h2>Recommended Tasks</h2>
+            <p>Fresh matches based on your software engineering skills and recent bids.</p>
+          </div>
+          <a class="btn btn-ghost" href="browse.html" data-transition>See All</a>
+        </div>
+        <div class="horizontal-scroll">
+          <article class="glass-card task-mini-card">
+            <div class="card-glare"></div>
+            <span class="tag tag-blue">Frontend</span>
+            <h3>Build responsive React screens for LMS assignment</h3>
+            <p>Budget PKR 3,000 - 4,500</p>
+            <div class="task-meta">
+              <span>Deadline May 7</span>
+              <span>Areeba Noor</span>
+            </div>
+          </article>
+          <article class="glass-card task-mini-card">
+            <div class="card-glare"></div>
+            <span class="tag tag-violet">UML</span>
+            <h3>Draw sequence diagrams for e-commerce checkout</h3>
+            <p>Budget PKR 2,000 - 3,200</p>
+            <div class="task-meta">
+              <span>Deadline May 8</span>
+              <span>Hamza Zafar</span>
+            </div>
+          </article>
+          <article class="glass-card task-mini-card">
+            <div class="card-glare"></div>
+            <span class="tag tag-green">Documentation</span>
+            <h3>Write SRS requirements for booking system</h3>
+            <p>Budget PKR 1,800 - 2,800</p>
+            <div class="task-meta">
+              <span>Deadline May 9</span>
+              <span>Mahnoor Ali</span>
+            </div>
+          </article>
+          <article class="glass-card task-mini-card">
+            <div class="card-glare"></div>
+            <span class="tag tag-warning">Database</span>
+            <h3>Create SQL queries for inventory management DB</h3>
+            <p>Budget PKR 2,500 - 3,500</p>
+            <div class="task-meta">
+              <span>Deadline May 10</span>
+              <span>Sana Khalid</span>
+            </div>
+          </article>
+          <article class="glass-card task-mini-card">
+            <div class="card-glare"></div>
+            <span class="tag tag-blue">Testing</span>
+            <h3>Prepare QA test cases for exam portal</h3>
+            <p>Budget PKR 2,000 - 3,500</p>
+            <div class="task-meta">
+              <span>Deadline May 11</span>
+              <span>Zara Ahmed</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="footer-spacer"></div>
+  </div>
+
+  <button class="help-button" type="button" aria-label="Help">
+    <i data-lucide="help-circle"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

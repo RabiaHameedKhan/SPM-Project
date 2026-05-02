@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Tasks | Campus Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <div class="noise-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="site-shell page-transition">
+    <header class="topbar">
+      <div class="container">
+        <div class="navbar">
+          <a class="brand" href="index.html" data-transition>
+            <span class="brand-icon"></span>
+            <span>Campus Connect</span>
+          </a>
+          <nav class="nav-links">
+            <a class="nav-link is-active" href="browse.html" data-transition>Browse</a>
+            <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+            <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+            <a class="nav-link" href="profile.html" data-transition>Profile</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+              <span class="badge-dot">3</span>
+            </button>
+            <div class="avatar-chip">
+              <div class="avatar avatar-sm">RK</div>
+              <span>Rabia</span>
+            </div>
+            <button class="mobile-menu-btn" type="button" data-mobile-toggle aria-label="Toggle menu">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-drawer glass-card">
+      <div class="card-glare"></div>
+      <nav>
+        <a class="nav-link is-active" href="browse.html" data-transition>Browse</a>
+        <a class="nav-link" href="post-task.html" data-transition>Post Task</a>
+        <a class="nav-link" href="dashboard.html" data-transition>Dashboard</a>
+        <a class="nav-link" href="profile.html" data-transition>Profile</a>
+      </nav>
+    </aside>
+
+    <main class="container section">
+      <section class="search-shell reveal">
+        <span class="eyebrow">Student Task Marketplace</span>
+        <h1 class="section-title">Browse small tasks posted by students across different courses and skills.</h1>
+        <div class="search-row">
+          <i data-lucide="search"></i>
+          <input class="search-input" type="search" aria-label="Search tasks">
+        </div>
+        <div class="chip-row" data-chip-group>
+          <button class="chip is-active" type="button">All</button>
+          <button class="chip" type="button">Assignments</button>
+          <button class="chip" type="button">Design</button>
+          <button class="chip" type="button">Coding</button>
+          <button class="chip" type="button">Writing</button>
+          <button class="chip" type="button">Research</button>
+        </div>
+      </section>
+
+      <section class="masonry-grid section">
+        <article class="glass-card masonry-card reveal" data-category="spm">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-violet">SPM</span>
+            <span class="badge tag-blue">NEW</span>
+          </div>
+          <h2 class="card-title">Software Project Management WBS and Gantt chart</h2>
+          <p>Create a clean WBS, milestone plan, Gantt chart, and risk table for a semester software project report.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 2,500 - 3,500</span>
+            <span>Due May 6</span>
+            <span>8 bids</span>
+            <div class="avatar avatar-sm">HZ</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="frontend">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-blue">Frontend</span>
+            <span class="badge tag-blue">NEW</span>
+          </div>
+          <h2 class="card-title">React UI for library management assignment</h2>
+          <p>Build responsive screens for books, issue records, students, and admin dashboard with reusable components.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 4,000 - 6,000</span>
+            <span>Due May 8</span>
+            <span>4 bids</span>
+            <div class="avatar avatar-sm">AN</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="documentation">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-green">Documentation</span>
+          </div>
+          <h2 class="card-title">SRS document for food delivery mobile app</h2>
+          <p>Need IEEE-style SRS sections, functional requirements, non-functional requirements, and use cases.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 1,000 - 1,800</span>
+            <span>Due May 5</span>
+            <span>10 bids</span>
+            <div class="avatar avatar-sm">MA</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="database">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-warning">Database</span>
+          </div>
+          <h2 class="card-title">ERD and SQL schema for hospital system</h2>
+          <p>Design normalized tables, relationships, constraints, and sample queries for a DBMS assignment.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 2,200 - 3,000</span>
+            <span>Due May 7</span>
+            <span>5 bids</span>
+            <div class="avatar avatar-sm">SK</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="java">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-blue">Java</span>
+          </div>
+          <h2 class="card-title">Java OOP assignment with class diagram</h2>
+          <p>Implement inheritance, interfaces, file handling, and provide a simple UML class diagram.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 3,500 - 5,000</span>
+            <span>Due May 9</span>
+            <span>7 bids</span>
+            <div class="avatar avatar-sm">BR</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="uml">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-violet">UML</span>
+          </div>
+          <h2 class="card-title">Use case and sequence diagrams for LMS project</h2>
+          <p>Prepare neat UML diagrams for student, teacher, admin, assignment upload, and grading flows.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 5,000 - 7,000</span>
+            <span>Due May 10</span>
+            <span>3 bids</span>
+            <div class="avatar avatar-sm">IR</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="testing">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-green">Testing</span>
+            <span class="badge tag-blue">NEW</span>
+          </div>
+          <h2 class="card-title">Test cases for online examination system</h2>
+          <p>Write black-box test cases, boundary value scenarios, and a bug report template for QA submission.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 1,500 - 2,300</span>
+            <span>Due May 4</span>
+            <span>6 bids</span>
+            <div class="avatar avatar-sm">ZA</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="presentation">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-warning">Presentation</span>
+          </div>
+          <h2 class="card-title">Final viva slides for software engineering project</h2>
+          <p>Create a polished 12-slide deck covering problem, architecture, modules, testing, and demo flow.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 1,800 - 2,400</span>
+            <span>Due May 11</span>
+            <span>2 bids</span>
+            <div class="avatar avatar-sm">NK</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+
+        <article class="glass-card masonry-card reveal" data-category="python">
+          <div class="card-glare"></div>
+          <div class="task-meta">
+            <span class="tag tag-blue">Python</span>
+          </div>
+          <h2 class="card-title">Python notebook for defect prediction mini project</h2>
+          <p>Clean dataset, train a simple model, add charts, and explain results for software quality assignment.</p>
+          <div class="task-meta" style="margin-top: 18px;">
+            <span class="tag tag-green">PKR 2,800 - 4,200</span>
+            <span>Due May 12</span>
+            <span>9 bids</span>
+            <div class="avatar avatar-sm">ZR</div>
+          </div>
+          <a class="btn btn-ghost card-cta" href="task-detail.html" data-transition>View Task -></a>
+        </article>
+      </section>
+    </main>
+
+    <div class="footer-spacer"></div>
+  </div>
+
+  <button class="help-button" type="button" aria-label="Help">
+    <i data-lucide="help-circle"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>
